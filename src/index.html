@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Art Gallery Management</title>
+</head>
+<body>
+    <div class="title">
+        <h1>Art Gallery Management System</h1>
+    </div>
+        <section id="addArtistForm">
+            <h2>New Artist Form</h2>
+            <form id="addArtist">
+                <div class="form-row">
+                <label for="artistName">Artist Name:</label>
+                <input type="text" id="artistName" placeholder="Artist Name" required>
+                <label for="artistEmail">Artist Email:</label>
+                <input type="email" id="artistEmail" placeholder="email" required>
+                </div>
+                <div class="form-row">
+                <label for="artistDOB">Date of birth:</label>
+                <input type="date" id="artistDOB" placeholder="DOB" required>
+                <label for="artistGender">Gender:</label>
+                <select id="artistGender" required>
+                    <option value="">-</option>
+                    <option value="Female">Female</option>
+                    <option value="Male">Male</option>
+                    <option value="Unspecified">Unspecified</option>
+                    <option value="Anonymous">Prefer not to say</option>
+                </select>
+                </div>
+                <div class="form-row">
+                <label for="artWorkType">Artwork type:</label>
+                <select id="artWorkType" required>
+                    <option value="">-</option>
+                    <option value="painting">Painting</option>
+                    <option value="sculpture">Sculpture</option>
+                    <option value="photograph">photograph</option>
+                    <option value="video-art">Video art</option>
+                    <option value="digital-art">Digital art</option>
+                    <option value="print-making">Print making</option>
+                </select>
+                <label for="exhibitionDate">Exhibition date</label>
+                <input type="date" id="exhibitionDate" required>
+                </div>
+                
+                <div class="form-row-notes">
+                <label for="specialNotes">Notes</label>
+                <textarea id="specialNotes" placeholder="Add additional information here"></textarea>
+            </div>
+            <div id="errorContainer" style="color: red; display: none;">
+                Please fill all required fields.
+            </div>
+                <button type="button" id="addArtistButton">Add Artist</button>
+            </form>
+        </section>
+        <section id="actions">
+        <div class="actionButtons">
+        
+            <input type="text" id="searchArtistId" placeholder="Enter Artist ID">  <!--Buttons that allow interaction with the table will be here-->
+            <button type="button" id="searchButton">Search</button>
+            <button type="button" id="displayAllButton">Display All Artists</button>
+            <button type="button" id="displayFeaturedButton">Display Featured Artists</button>
+    </section>
+        </div>
+        <div class="featuredArtistLists">
+    <section id="featuredArtistsList">
+        <h2>Featured Artists</h2>
+        <div id="featuredArtists"></div> <!--Featured artists will be displayed on a table here-->
+    </section>
+    </div>
+    <div class="otherArtistLists">
+    <section id="artistList">
+        <h2>Artists</h2>
+        <div id="artists"></div> <!-- Artists will be displayed on a table here -->
+    </section>
+</div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
