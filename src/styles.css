@@ -1,3 +1,6 @@
+html {
+    font-size: 16px;
+  }
 
 body {
     font-family: 'Times New Roman', Times, serif;
@@ -58,6 +61,12 @@ button {
     gap: 10px; 
 }
 
+@media (max-width: 600px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
 .form-row-notes {
     grid-template-columns: 1fr; 
 }
@@ -110,5 +119,21 @@ button {
     color: white;
 }
 
+@media (max-width: 600px) {
+    html {
+      font-size: 14px; 
+    }
+  }
 
+@media (max-width: 600px) {
+    button {
+      padding: 15px 10px;
+    }
+  }
+
+@media (max-width: 600px) {
+    .secondary-info {
+      display: none;
+    }
+  }
 
