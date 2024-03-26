@@ -1,4 +1,4 @@
-//This empty array will be the database for the artists added from the form.
+//This empty array will be the database used for the artists added from the form.
 let artists = [];
 //This is used to keep track of the unique artist Id.
 let artistId = 0;
